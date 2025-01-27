@@ -1,0 +1,55 @@
+@use 'variables';
+
+main {
+  padding-bottom: 70px;
+}
+
+h2 {
+  padding: 10px;
+  color: variables.$text-color;
+}
+
+.textavisounidades {
+  color: red;
+  font-size: 28px;
+}
+
+.texthorarios {
+  color: variables.$text-color;
+}
+
+#main h1 {
+  padding: 10px;
+  color: red;
+}
+
+.tituloQuienesomos {
+  font-size: 50px;
+  color: red;
+}
+
+.big-div-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 2 columnas de igual tamaño
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .big-div {
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; // Suavidad en la animación
+
+      &:hover {
+        transform: scale(1.05); // Efecto de zoom al pasar el mouse
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); // Sombra adicional
+      }
+    }
+  }
+}

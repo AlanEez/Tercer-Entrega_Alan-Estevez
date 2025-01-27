@@ -1,0 +1,63 @@
+@use 'sass:color';
+@use 'variables';
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: variables.$background-color;
+
+    .card {
+        background-color: variables.$card-background;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: variables.$text-color;
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 2px solid #333;
+        }
+
+        h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            color: variables.$text-light;
+        }
+
+        button {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: variables.$secondary-color;
+            color: variables.$text-color;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: color.adjust(variables.$secondary-color, $lightness: 10%);
+            }
+        }
+    }
+}
+
+.big-button {
+    display: grid;
+    text-align: center;
+    border-radius: 8px;
+    color: variables.$text-color;
+    background-color: variables.$secondary-color;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,13 @@
+@use '../variables';
+
+.quienes-somos {
+    padding: 20px;
+    text-align: center;
+    color: variables.$text-color;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+}

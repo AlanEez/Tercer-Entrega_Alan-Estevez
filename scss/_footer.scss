@@ -1,0 +1,31 @@
+#footer {
+    position: fixed;
+
+    /* Fije el footer al fondo de la página */
+    bottom: 0;
+
+    /* Alinee al fondo */
+    left: 0;
+    width: 100%;
+
+    /* Ocupa todo el ancho */
+    background-color: #333;
+
+    /* Barra gris oscura */
+    display: flex;
+    justify-content: space-between;
+
+    /* Puse los textos en los extremos */
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+
+    /* Sombra opcional para resaltar */
+    color: white;
+    z-index: 1000;
+}
+
+.footerText h3 {
+    margin: 0;
+    font-size: 1rem;
+}

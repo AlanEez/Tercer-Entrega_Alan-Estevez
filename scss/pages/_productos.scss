@@ -1,0 +1,105 @@
+@use '../variables';
+
+// Contenedor principal de productos
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: variables.$background-color; // Color de fondo de la sección
+}
+
+// Estilo de cada tarjeta de producto
+.contenedorProductos {
+  background-color: variables.$card-background; // Fondo de tarjeta
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: variables.$text-color; // Color del texto
+  animation: fadeIn 0.5s ease forwards; 
+  opacity: 0; 
+  border: 2px white solid; // Borde blanco alrededor de cada producto
+  display: inline-block;
+  margin: 20px;
+
+  // Animación al pasar el ratón
+  &:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+
+  // Transición mínima con sombra blanca
+  transition: box-shadow 0.2s ease, transform 0.2s ease; // Suavidad de la sombra y movimiento
+  &:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); // Sombra blanca suave
+    transform: translateY(-5px); // Elevación mínima
+  }
+
+  // Animaciones para cada tarjeta
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+  &:nth-child(5) { animation-delay: 0.5s; }
+  &:nth-child(6) { animation-delay: 0.6s; }
+  &:nth-child(7) { animation-delay: 0.7s; }
+  &:nth-child(8) { animation-delay: 0.8s; }
+  &:nth-child(9) { animation-delay: 0.9s; }
+  &:nth-child(10) { animation-delay: 1s; }
+  &:nth-child(11) { animation-delay: 1.1s; }
+}
+
+// Estilo de imágenes
+.imgProductos {
+  width: 100%; 
+  height: auto; 
+  display: inline-block;
+  height: 250px; /* Altura de las imágenes de los productos */
+  padding: 10px;
+}
+
+// Estilos de texto de producto y precio
+.textProduct, .textPrecio {
+  margin: 0.5rem 0; 
+  opacity: 0; 
+  animation: fadeIn 0.5s ease forwards; 
+  text-align: center;
+  color: variables.$text-color; // Color del texto
+}
+
+// Animaciones para el texto
+.textProduct {
+  font-weight: bold;
+}
+
+// Ajustes de animación para el texto
+.textProduct:nth-child(1), .textPrecio:nth-child(1) { animation-delay: 0.1s; }
+.textProduct:nth-child(2), .textPrecio:nth-child(2) { animation-delay: 0.2s; }
+.textProduct:nth-child(3), .textPrecio:nth-child(3) { animation-delay: 0.3s; }
+.textProduct:nth-child(4), .textPrecio:nth-child(4) { animation-delay: 0.4s; }
+.textProduct:nth-child(5), .textPrecio:nth-child(5) { animation-delay: 0.5s; }
+.textProduct:nth-child(6), .textPrecio:nth-child(6) { animation-delay: 0.6s; }
+.textProduct:nth-child(7), .textPrecio:nth-child(7) { animation-delay: 0.7s; }
+.textProduct:nth-child(8), .textPrecio:nth-child(8) { animation-delay: 0.8s; }
+.textProduct:nth-child(9), .textPrecio:nth-child(9) { animation-delay: 0.9s; }
+.textProduct:nth-child(10), .textPrecio:nth-child(10) { animation-delay: 1s; }
+.textProduct:nth-child(11), .textPrecio:nth-child(11) { animation-delay: 1.1s; }
+
+.textPrecio {
+  padding: 2px;
+  font-size: 20px; // Tamaño del precio
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'reset';
+@use 'header';
+@use 'main';
+@use 'cards';
+@use 'responsive';
+@use 'footer';
+
+//---PAGES
+@use 'pages/contacto';
+@use 'pages/productos';
+@use 'pages/quienes-somos';
+@use 'pages/sucursal';
